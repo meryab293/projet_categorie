@@ -11,8 +11,9 @@ const pool = new Pool({
   host:  "localhost", 
   port:  5432,
   user: "postgres",
+  //utiliser votre password et base de donnés
   password: "",
-  database: "db_project",
+  database: "",
 });
 
 const initializeTables = async () => {
