@@ -37,7 +37,7 @@ const Categories: React.FC = () => {
       <h2>Categories</h2>
       <input
         type="text"
-        placeholder="Nouvelle catégorie"
+        placeholder="New Categories"
         value={newCategory}
         onChange={(e) => setNewCategory(e.target.value)}
       />

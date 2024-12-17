@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import dotenv from "dotenv";
-
+import cors from "cors"; 
 import { Pool } from "pg";
 
 
@@ -11,9 +11,9 @@ const pool = new Pool({
   host:  "localhost", 
   port:  5432,
   user: "postgres",
-  //utiliser votre password et base de donnés
+  //utiliser votre password 
   password: "",
-  database: "",
+  database: "db_project",
 });
 
 const initializeTables = async () => {
@@ -45,6 +45,7 @@ const initializeTables = async () => {
 const app = express();
 const port= 3001;
 
+app.use(cors());
 
 app.use(express.json());
 

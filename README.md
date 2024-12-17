@@ -1,26 +1,26 @@
 # projet_categorie
 
 
-## *1. Prérequis*
+## *1.
 
-- *Node.js* installé sur votre machine.
-- *PostgreSQL* configuré avec un utilisateur et un mot de passe.
+- Node.js installé sur la machine.
+- PostgreSQL configuré avec un utilisateur et un mot de passe.
 - *NPM* installé.
 
 ---
 
 ## *2. Configuration de la Base de Données*
 
-1. *Créer une base de données PostgreSQL* :
+1. la création d'une database PostgreSQL   :
 
-   Connectez-vous à PostgreSQL et exécutez la commande suivante :
-   sql
+  se connecter  à PostgreSQL "sudo -u postgres psql" et exécutez la commande suivante :
+   
    CREATE DATABASE db_project;
    
 
 2. *Créer les tables* :
 
-   Exécutez les scripts SQL suivants dans la base db_project :
+   Exécuter les scripts SQL suivants dans la base db_project :
 
    sql
    CREATE TABLE IF NOT EXISTS categories (
@@ -39,56 +39,56 @@
 
 ## *3. Configuration du Backend*
 
-1. *Aller dans le dossier backend* :
+1.  dans le dossier backend :
    bash
    cd backend
    
 
 2. *Modifier les informations de connexion à la base de données* :  
-   Dans backend/src/app.ts, mettez à jour ces valeurs :
+   Dans backend/src/app.ts, mettre à jour ces valeurs :
    typescript
    export const pool = new Pool({
        host: "localhost",
        port: 5432,
-       user: "votre_utilisateur_postgres",
-       password: "votre_mot_de_passe",
+       user: "postgres",
+       password: "",
        database: "db_project",
    });
    
 
-3. *Installer les dépendances* :
+3. Installer les dépendances:
    bash
    npm install
    
 
-4. *Démarrer le serveur* :
+4. Démarrer le serveur:
    bash
    npm start
    
 
-5. *Tester le backend* :  
+5. Tester le backend :  
    Le serveur s'exécute sur http://localhost:3001.
 
 ---
 
 ## *4. Configuration du Frontend*
 
-1. *Aller dans le dossier frontend* :
+1.  dans le dossier frontend:
    bash
    cd frontend
    
 
-2. *Installer les dépendances* :
+2. Installer les dépendances :
    bash
    npm install
    
 
-3. *Démarrer l’application React* :
+3. Démarrer l’application React :
    bash
    npm start
    
 
-4. *Accéder à l’application* :  
+4. Accéder à l’application :  
    Ouvrez votre navigateur et allez sur http://localhost:3000.
 
 ---
